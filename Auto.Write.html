@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Write Text</title>
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Multi',sans-serif;
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+    
+<h1 id="text"></h1>
+
+
+
+<script type="text/javascript">
+
+const text = document.getElementById('text')
+var book = 'Ben Yazılımı Seviyorum '
+var index = 0
+
+setInterval(writeBack,100);
+
+
+function writeBack(){
+
+text.innerText = book.slice(0,index)
+index++
+
+if(index > book.length -1){
+    index = 0
+}
+
+
+
+
+}
+</script>
+
+
+
+</body>
+</html>
